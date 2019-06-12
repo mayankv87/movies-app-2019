@@ -1,0 +1,31 @@
+
+<mat-drawer-container>
+    <mat-drawer #drawer mode="over" opened="false" position="end">
+      <div class="filters">
+        <div (click)="drawer.toggle()" class="close-filters"><mat-icon>clear</mat-icon></div>
+        <div class="heading">Filter by genres</div>
+        <div *ngFor="let genre of genres" class="genre">
+          <input type="checkbox" (change)="filterByGenres(genre)" /> {{ genre }}
+        </div>
+      </div>
+    </mat-drawer>
+  </mat-drawer-container>
+  
+<div class="search-container">
+    <div class="search-box ">
+      <input
+        type="text"
+        (input)="searchMovies($event.target.value)"
+        class="search-bar"
+        placeholder="Type to search movies"
+      />
+    </div>
+    <div class="filter-link-mobile">
+        <a class="btn" (click)="drawer.toggle();"><mat-icon>movies_filter</mat-icon> </a>
+      </div>
+    <div class="filter-button">
+        <button mat-raised-button (click)="drawer.toggle()">
+          Filters
+        </button>
+      </div>
+  </div>

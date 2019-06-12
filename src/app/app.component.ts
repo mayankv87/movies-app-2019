@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'movies-app-betsson';
+ // This is to generate random placeholder images
+ mySlideImages = ['dark-knight', 'deadpool-banner', 'compton-banner'];
+ mySlideOptions = {items: 1, dots: true, nav: false};
 }

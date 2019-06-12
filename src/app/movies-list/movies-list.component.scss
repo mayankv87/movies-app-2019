@@ -1,0 +1,14 @@
+#mainbox {
+    font-family: calibri;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1023px;
+  }
+  
+  .search {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }

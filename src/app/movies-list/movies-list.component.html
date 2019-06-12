@@ -1,0 +1,14 @@
+
+<div class="search">
+  <app-movie-search></app-movie-search>
+</div>
+
+<div id="mainbox">
+  <div *ngFor="let movie of movieList">
+    <app-card
+      [name]="movie.name"
+      [img]="movie.img"
+      [rate]="movie.rate"
+    ></app-card>
+  </div>
+</div>
