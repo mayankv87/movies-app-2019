@@ -3,7 +3,7 @@ import { select } from '@angular-redux/store';
 import { Movies } from './../models/movies.model';
 import { Observable } from 'rxjs';
 import { MoviesAction } from './../actions/movies.action';
-import { MoviesSelector } from './../selectors';
+import { MoviesSelector } from '../store/selectors';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-movie-details',
@@ -13,18 +13,41 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MovieDetailsComponent implements OnInit {
   movie: any;
   @select() public movies: Observable<Movies>;
-  constructor(private actions: MoviesAction,
-              private selector: MoviesSelector, private activatedRoute: ActivatedRoute, private route: Router) { }
+  constructor(
+    private actions: MoviesAction,
+    private selector: MoviesSelector,
+    private activatedRoute: ActivatedRoute,
+    private route: Router
+  ) {}
 
+  playerVars = {
+    cc_lang_pref: 'en'
+  };
+  private player: any;
+  private ytEvent: any;
+
+  onStateChange(event: any) {
+    this.ytEvent = event.data;
+  }
+  savePlayer(player: any) {
+    this.player = player;
+  }
+
+  playVideo() {
+    this.player.playVideo();
+  }
+
+  pauseVideo() {
+    this.player.pauseVideo();
+  }
   ngOnInit() {
-    this.movies.subscribe((res) => {
+    this.movies.subscribe(res => {
       const movieList = this.selector.getMoviesList(res);
       if (movieList.length === 0) {
         this.route.navigate(['/movies']);
       }
       const movieId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
       this.movie = this.selector.getMovieById(movieList, movieId);
-  });
+    });
   }
-
 }

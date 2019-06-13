@@ -9,6 +9,31 @@
         <div class="item">{{movie.description}}</div>
         <div class="item">{{movie.length}}</div>
         <div class="item"><app-rating [rating]="movie.rate"></app-rating></div>
+        <div class="play-btn">
+            <button mat-stroked-button color="accent" *ngIf="ytEvent !== 1"
+            (click)="playVideo()">
+            Watch Trailer
+          </button>
+          <button *ngIf="ytEvent === 1"
+             mat-stroked-button color="accent" 
+            (click)="pauseVideo()">
+            Pause Trailer
+          </button>
+        </div>
+      </div>
+      <div class="video-box">
+
+  <section>
+      <section>
+        <youtube-player
+          [videoId]="movie.trailerId"
+          (ready)="savePlayer($event)"
+          (change)="onStateChange($event)"
+          >
+        </youtube-player>
+      </section>
+      <div class="card-body"></div>
+    </section>
       </div>
   </div>
 </div>

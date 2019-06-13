@@ -27,9 +27,22 @@
     @media screen and (min-width: 768px) {
         text-align: left;
     }
+
+    .item {
+      margin-bottom: 15px;
+    }
   }
-  .item {
-    margin-bottom: 15px;
+
+  .video-box {
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      text-align: left;
+  }
+
+  }
+
+  .play-btn {
+    padding-top: 44px;
   }
 }
 

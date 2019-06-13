@@ -3,7 +3,7 @@ import { select } from '@angular-redux/store';
 import { Movies } from './../models/movies.model';
 import { Observable } from 'rxjs';
 import { MoviesAction } from './../actions/movies.action';
-import { MoviesSelector } from './../selectors';
+import { MoviesSelector } from '../store/selectors';
 
 @Component({
   selector: 'app-movies-list',

@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { OwlModule } from 'ngx-owl-carousel';
 import {A11yModule} from '@angular/cdk/a11y';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
 import {
   MatSidenavModule,
   MatButtonModule,
@@ -40,7 +42,8 @@ import { RatingComponent } from './rating/rating.component';
     A11yModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
