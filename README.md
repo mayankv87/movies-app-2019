@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
 
-#Steps to run this App
+# Steps to run this App
 
 Run `yarn install or npm install` to install dependencies and dev dependencies.
 
