@@ -67,7 +67,11 @@ mat-drawer-container {
   top: 0;
   width: 204px;
   height: 672px;
-  z-index: 3;
+  z-index: -2;
+
+  @media screen and (min-width: 768px) {
+    z-index: 3;
+  }
 
   .mat-drawer {
     overflow-y: visible;
