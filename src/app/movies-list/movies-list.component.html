@@ -1,14 +1,32 @@
+<div class="owl-carousel-holder">
+    <div class="slider-image-section">
+        <owl-carousel
+            [options]="mySlideOptions"
+            [items]="images"
+            [carouselClasses]="['owl-theme', 'sliding']"
+        >
+            <div class="item" *ngFor="let image of mySlideImages;let i = index">
+                <div>
+                    <img src='./../../assets/movie-banners/{{image}}.jpg'/>
+                </div>
+            </div>
+        </owl-carousel>
+    </div>
+</div>
 
 <div class="search">
   <app-movie-search></app-movie-search>
 </div>
 
-<div id="mainbox">
+<div class="movies-list">
   <div *ngFor="let movie of movieList">
+      <a routerLink="/movie-details/{{movie.id}}">
+    
     <app-card
       [name]="movie.name"
       [img]="movie.img"
       [rate]="movie.rate"
     ></app-card>
+  </a>
   </div>
 </div>

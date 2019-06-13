@@ -2,22 +2,6 @@
     <header>
         <div class="logo"><img src="./../assets/movie-logo.png" alt="logo"/></div>
     </header>
-
-    <div class="owl-carousel-holder">
-            <div class="slider-image-section">
-                <owl-carousel
-                    [options]="mySlideOptions"
-                    [items]="images"
-                    [carouselClasses]="['owl-theme', 'sliding']"
-                >
-                    <div class="item" *ngFor="let image of mySlideImages;let i = index">
-                        <div>
-                            <img src='../assets/movie-banners/{{image}}.jpg'/>
-                        </div>
-                    </div>
-                </owl-carousel>
-            </div>
-        </div>
         
     <router-outlet></router-outlet>
 </div>

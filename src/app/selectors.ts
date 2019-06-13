@@ -11,6 +11,13 @@ export class MoviesSelector {
         return state.list;
     }
 
+    getMovieById(movieList, movieId) {
+        console.log(movieList);
+        return movieList.filter((movie) => {
+            return movie.id === movieId;
+        })[0];
+    }
+
     containsAnyGenres(source, target) {
         const result = source.filter((item) => {
            return target.indexOf(item) > -1;

@@ -12,6 +12,9 @@ import { MoviesSelector } from './../selectors';
 })
 export class MoviesListComponent implements OnInit {
   movieList = [];
+   // This is to generate random placeholder images
+  mySlideImages = ['dark-knight', 'deadpool-banner', 'compton-banner'];
+  mySlideOptions = {items: 1, dots: true, nav: false};
   @select('movies') public movies: Observable<Movies>;
   constructor(private actions: MoviesAction,
               private selector: MoviesSelector) {

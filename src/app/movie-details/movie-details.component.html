@@ -1,3 +1,14 @@
-<p>
-  movie-details works!
-</p>
+<div class="nav">
+  <div class="back"><a routerLink="/movies">Go Back to Movies</a></div>
+</div>
+<div class="movie-details">
+  <div class="details-container">
+      <div class="img-box"><img src="../../assets/movie-covers/{{movie.img}}" alt="movie image"/></div>
+      <div class="content-box">
+        <h1>{{movie.name}}</h1>
+        <div class="item">{{movie.description}}</div>
+        <div class="item">{{movie.length}}</div>
+        <div class="item"><app-rating [rating]="movie.rate"></app-rating></div>
+      </div>
+  </div>
+</div>

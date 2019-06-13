@@ -18,6 +18,7 @@ import {
   MatButtonModule,
   MatIconModule
 } from '@angular/material';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {
     MoviesListComponent,
     MovieDetailsComponent,
     MovieSearchComponent,
-    CardComponent
+    CardComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

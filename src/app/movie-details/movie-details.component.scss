@@ -1,0 +1,58 @@
+.movie-details {
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    width: 1012px;
+  }
+
+  .details-container {
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+  }
+
+  .img-box {
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+        flex-basis: 21%;
+      }
+  }
+
+  .content-box {
+    flex-basis: 38%;
+    text-align: center;
+    
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+  }
+  .item {
+    margin-bottom: 15px;
+  }
+}
+
+.nav {
+    height: 60px;
+    margin: 0 auto;
+    color: #ffffff;
+    @media screen and (min-width: 768px) {
+        width: 1005px;
+      }
+
+    .back {
+        padding-top: 25px;
+        text-align: center;
+
+
+        @media screen and (min-width: 768px) {
+            padding-top: 12px;
+            text-align: left;
+          }
+
+        a {
+            color: #ffffff;
+        }
+    }
+  }
