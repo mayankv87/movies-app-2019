@@ -23,8 +23,8 @@ export class MovieDetailsComponent implements OnInit {
   playerVars = {
     cc_lang_pref: 'en'
   };
-  private player: any;
-  private ytEvent: any;
+  public player: any;
+  public ytEvent: any;
 
   onStateChange(event: any) {
     this.ytEvent = event.data;
